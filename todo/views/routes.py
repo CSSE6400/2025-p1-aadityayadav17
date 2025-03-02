@@ -7,7 +7,6 @@ def health():
     return jsonify({"status": "ok"})
 
 @api.route('/todos', methods=['GET'])
-
 def get_todos():
     return jsonify([{
         "id": 1,
@@ -41,7 +40,7 @@ def create_todo():
         "deadline_at": "2023-02-27T00:00:00",
         "created_at": "2023-02-20T00:00:00",
         "updated_at": "2023-02-20T00:00:00"
-    })
+    }), 201
 
 @api.route('/todos/<int:id>', methods=['PUT'])
 def update_todo(id):
